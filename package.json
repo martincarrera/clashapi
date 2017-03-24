@@ -1,0 +1,20 @@
+{
+  "name": "clashapi",
+  "version": "0.0.0",
+  "description": "A module to consume clashapi.xyz",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "clash",
+    "royale",
+    "api",
+    "clashapi"
+  ],
+  "author": "Martin Carrera <mcarrera.92@gmail.com> (http://martincarrera.xyz/)",
+  "license": "MIT",
+  "peerDependencies": {
+    "trae": "^1.3.0"
+  }
+}
