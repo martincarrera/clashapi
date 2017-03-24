@@ -13,6 +13,9 @@
     "clashapi"
   ],
   "author": "Martin Carrera <mcarrera.92@gmail.com> (http://martincarrera.xyz/)",
+  "contributors": [
+    "Christian Gill <gillchristiang@gmail.com> (https://gillchristian.xyz/)",
+  ],
   "license": "MIT",
   "dependencies": {
     "trae": "^1.3.0"
