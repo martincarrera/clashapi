@@ -4,7 +4,8 @@
   "description": "A module to consume clashapi.xyz",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [
     "clash",
@@ -19,5 +20,16 @@
   "license": "MIT",
   "dependencies": {
     "trae": "^1.3.0"
+  },
+  "devDependencies": {
+    "fetch-mock": "^5.9.4",
+    "jest": "^19.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "index.js",
+      "factory.js"
+    ]
   }
 }
