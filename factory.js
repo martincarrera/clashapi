@@ -1,15 +1,7 @@
+const { API_URL, modelsNames } = require('./constants')
+
 module.exports = trae => {
-  const API_URL = 'http://www.clashapi.xyz/api'
-
-  const modelsNames = [
-    'arenas',
-    'cards',
-    'chests',
-    'players',
-    'leagues',
-  ]
-
-  const api = trae.create()
+  const api = trae.create({bodyType: 'json'})
 
   api.after(res => res.data)
 
