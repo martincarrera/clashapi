@@ -1,22 +1,25 @@
 const trae = require('trae')
 
-const BASE_URL = 'http://www.clashapi.xyz/api'
+const API_URL = 'http://www.clashapi.xyz/api'
 
 const modelsNames = [
-  'arenas',
-  'cards',
-  'chests',
-  'players',
-  'leagues'
+  'arenas', 
+  'cards', 
+  'chests', 
+  'players', 
+  'leagues',
 ]
 
-trae.after(res => res.data)
+const api = trae.create()
 
-const getModelFactory = model => (id = '') => trae.create({baseUrl: `${BASE_URL}/${model}/`}).get(id)
+api.after(res => res.data)
 
-const models = modelsNames
-  .reduce((m, model) => Object.assign({}, m, {
-    [model]: getModelFactory(model)
-  }), {})
+const assignModelGetter = (models, model) =>
+  Object.assign(models, {
+    [model]: (id = '') => api.get(`${API_URL}/${model}/${id}`)
+  })
+
+const models = modelsNames.reduce(assignModelGetter, {})
 
 module.exports = models
+
