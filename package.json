@@ -14,9 +14,6 @@
   ],
   "author": "Martin Carrera <mcarrera.92@gmail.com> (http://martincarrera.xyz/)",
   "license": "MIT",
-  "peerDependencies": {
-    "trae": "^1.3.0"
-  },
   "dependencies": {
     "trae": "^1.3.0"
   }
