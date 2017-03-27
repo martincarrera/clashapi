@@ -29,7 +29,7 @@ $ yarn add clashapi
 
 If you are not using [trae](https://github.com/Huemul/trae) (Pro tip: give it a try):
 
-```
+```js
 import clashapi from 'clashapi'
 
 clashapi.chests()
@@ -38,7 +38,7 @@ clashapi.chests()
 
 If you are using [that awesome library](https://github.com/Huemul/trae):
 
-```
+```js
 import trae from 'trae'
 import clashapiFactory from 'clashapi/factory'
 
@@ -70,7 +70,7 @@ clashapi.chests()
 
 ### Examples
 
-```
+```js
 clashapi
   .chests() // returns all chests
   
