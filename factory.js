@@ -1,6 +1,6 @@
-const { API_URL, modelsNames } = require('./constants')
+import { API_URL, modelsNames } from './constants'
 
-module.exports = trae => {
+export default trae => {
   const api = trae.create({bodyType: 'json'})
 
   api.after(res => res.data)

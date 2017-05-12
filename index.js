@@ -1,6 +1,6 @@
-const trae = require('trae')
+import trae from 'trae'
 
-const factory = require('./factory')
+import factory from './factory'
 
-module.exports = factory(trae)
+export default factory(trae)
 

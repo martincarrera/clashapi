@@ -2,8 +2,11 @@
   "name": "clashapi",
   "version": "0.0.1",
   "description": "A module to consume clashapi.xyz",
-  "main": "index.js",
+  "main": "dist/clashapi.js",
+  "module": "dist/clashapi.umd.min.js",
   "scripts": {
+    "build": "NODE_ENV=production node scripts/rollup.js",
+    "build:dev": "node scripts/rollup.js",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
@@ -22,8 +25,25 @@
     "trae": "^1.3.0"
   },
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
     "fetch-mock": "^5.9.4",
-    "jest": "^19.0.2"
+    "jest": "^19.0.2",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-conditional": "^1.1.1",
+    "rollup-plugin-eslint": "^3.0.0",
+    "rollup-plugin-filesize": "^1.2.1",
+    "rollup-plugin-node-builtins": "^2.1.0",
+    "rollup-plugin-node-globals": "^1.1.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-plugin-visualizer": "^0.2.0"
   },
   "jest": {
     "testEnvironment": "node",
